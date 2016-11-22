@@ -1,10 +1,11 @@
 ﻿#pragma comment(linker,"\"/manifestdependency:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 
-#pragma comment(lib,"shlwapi")
-#pragma comment(lib,"comctl32")
-#include<windows.h>
-#include<shlwapi.h>
-#include<commctrl.h>
+#pragma comment(lib, "shlwapi")
+#pragma comment(lib, "comctl32")
+#include <windows.h>
+#include <shlwapi.h>
+#include <commctrl.h>
+#include "resource.h"
 
 HWND hList;
 TCHAR szClassName[] = TEXT("Window");
@@ -149,7 +150,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR pCmdLine, int 
 		0,
 		0,
 		hInstance,
-		0,
+		LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON1)),
 		LoadCursor(0,IDC_ARROW),
 		(HBRUSH)(COLOR_WINDOW + 1),
 		0,
